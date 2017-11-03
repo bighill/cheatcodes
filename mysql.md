@@ -32,6 +32,10 @@ CREATE TABLE `my_table` (
 ```
 
 ```sql
+RENAME TABLE `this_table` TO `that_table`;
+```
+
+```sql
 DESCRIBE my_table;
 ```
 

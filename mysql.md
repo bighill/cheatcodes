@@ -1,4 +1,4 @@
-# mysql cheatsheet #
+# MySQL
 
 ## Database ##
 
@@ -88,8 +88,6 @@ WHERE my_column=my_value;
 ```
 
 ## User ##
-
-_Typically you're going to want to do these in this order..._
 
 1) Make user
 ```sql

@@ -1,6 +1,4 @@
-# tar cheatsheet #
-
-_Yet another `tar` cheatsheet._
+# tar
 
 Compress and archive a directory
 ```bash

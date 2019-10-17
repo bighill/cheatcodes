@@ -1,4 +1,4 @@
-# php cheatsheet #
+# PHP
 
 switch
 ```php
@@ -22,20 +22,18 @@ usort
 ```php
 function make_sort($a,$b)
 {
-	if ( $a == $b ) return 0;
-	return ( $a < $b ) ? -1 : 1;
+	if ($a == $b) return 0;
+	return ($a < $b) ? -1 : 1;
 }
 
-$a=array( 4, 2, 8, 6 );
+$a=array(4, 2, 8, 6);
 
-print_r( $a );
+print_r($a);
+// Array ( [0] => 4 [1] => 2 [2] => 8 [3] => 6 )
 
-// Array ( [0] => 4 [1] => 2 [2] => 8 [3] => 6 ) 
 
+usort($a, "make_sort");
 
-usort( $a, "make_sort" );
-
-print_r( $a );
-
+print_r($a);
 // Array ( [0] => 2 [1] => 4 [2] => 6 [3] => 8 )
 ```

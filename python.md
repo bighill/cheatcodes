@@ -149,7 +149,7 @@ twice_xs = [double(x) for x in xs]
 twice_xs = map(double, xs)
 ```
 
-# Filter
+## Filter
 
 ```python
 def is_even(x): return x % 2 == 0
@@ -161,7 +161,7 @@ x_evens = [x for x in xs if is_even(x)]
 x_evens = filter(is_even, xs)
 ```
 
-# args & kwargs
+## args & kwargs
 
 ```python
 def magic(*args, **kwargs):

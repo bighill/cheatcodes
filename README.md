@@ -1,5 +1,5 @@
-# Bighill Cheatsheets
+# Cheat Codes
 
-These are my personal cheatsheets.
+These are my personal examples and reminders.
 
 Nothing in this repo is guaranteed to be accurate.

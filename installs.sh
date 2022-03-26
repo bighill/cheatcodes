@@ -9,3 +9,9 @@ sudo apt-get install -y \
   vim   \
   neovim \
   net-tools
+
+#
+# Other
+#
+
+# sudo apt-get install -y nginx

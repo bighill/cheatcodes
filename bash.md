@@ -1,5 +1,10 @@
 # bash
 
+Shabang
+```bash
+#!/bin/bash
+```
+
 This dir
 
 ```bash

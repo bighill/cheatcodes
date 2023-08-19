@@ -40,7 +40,7 @@ fn_4_pane() {
 
   # Top right pane
   tmux split-window -h
-  tmux send-keys 'echo "Im top right' Enter
+  tmux send-keys 'echo "Im top right"' Enter
 
   # Bottom left pane
   tmux select-pane -D

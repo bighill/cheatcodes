@@ -34,7 +34,7 @@ Plug 'itchyny/lightline.vim'
 let g:lightline = { 'colorscheme': 'wombat' }
 
 "" Auto pairs to auto close ( [ {
-Plug 'jiangmiao/auto-pairs'
+""Plug 'jiangmiao/auto-pairs'
 
 "" Themes
 Plug 'morhetz/gruvbox'

@@ -9,6 +9,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# _lex 
+# - put this file in ~/.config/i3/config
+# - Mod1 <-- alt
+# - Mod4 <-- super
+
 set $mod Mod1
 
 # small borders for new windows

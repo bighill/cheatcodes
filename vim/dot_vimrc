@@ -1,26 +1,21 @@
-"" Install vim plug
+"" HINT Install vim plug
 "" $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-"" Use plug to install vim plugins
+"" HINT Use plug to install vim plugins
 "" :PlugInstall
 
-set background=dark
-
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-
-syntax on
-
+""
 "" Plug init
+""
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall
 endif
 
-"" Plug installations
+""
+"" Plug START
+""
 call plug#begin('~/.local/share/nvim/plugged')
 
 "" Nerdtree file explorer
@@ -28,27 +23,45 @@ Plug 'preservim/nerdtree'
 
 "" Git gutter shows git changes
 Plug 'airblade/vim-gitgutter'
+set updatetime=100
 
 "" Lightline status bar
 Plug 'itchyny/lightline.vim'
-let g:lightline = { 'colorscheme': 'wombat' }
-
-"" Auto pairs to auto close ( [ {
-""Plug 'jiangmiao/auto-pairs'
+let g:lightline = { 'colorscheme': 'gotham256' }
+set noshowmode
 
 "" Themes
-Plug 'morhetz/gruvbox'
-Plug 'ldelossa/vimdark'
-Plug 'EdenEast/nightfox.nvim'
-Plug 'tanvirtin/monokai.nvim'
+Plug 'whatyouhide/vim-gotham'
 
 call plug#end()
+""
+"" Plug END
+""
+
+""""""""""""""""""""""
+
+"" Syntax highlighting
+syntax on
+
+"" Tabs
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+"" Line numbers
+set number
+
+"" Hide vsplit border
+highlight VertSplit cterm=NONE
 
 "" Key mappings
 map <f12> :NERDTreeToggle<CR>
 
 "" Set theme
-"colorscheme gruvbox
-colorscheme vimdark
-"colorscheme nightfox
-"colorscheme monokai
+colorscheme gotham256
+
+"" Nvim-specific config
+if has('nvim')
+  "" set nvim-specific config here
+endif

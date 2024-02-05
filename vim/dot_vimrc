@@ -18,20 +18,28 @@ endif
 ""
 call plug#begin('~/.local/share/nvim/plugged')
 
+"" Vim-go (for help, see `:help vim-go`)
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 "" Nerdtree file explorer
 Plug 'preservim/nerdtree'
 
 "" Git gutter shows git changes
-Plug 'airblade/vim-gitgutter'
-set updatetime=100
+if has('nvim')
+  Plug 'airblade/vim-gitgutter'
+  set updatetime=100
+endif
 
 "" Lightline status bar
 Plug 'itchyny/lightline.vim'
 let g:lightline = { 'colorscheme': 'gotham256' }
+"let g:lightline = { 'colorscheme': 'nord' }
 set noshowmode
 
 "" Themes
+Plug 'morhetz/gruvbox'
 Plug 'whatyouhide/vim-gotham'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 ""
@@ -50,7 +58,9 @@ set shiftwidth=2
 set expandtab
 
 "" Line numbers
-set number
+if has('nvim')
+  set number
+endif
 
 "" Hide vsplit border
 highlight VertSplit cterm=NONE
@@ -59,9 +69,12 @@ highlight VertSplit cterm=NONE
 map <f12> :NERDTreeToggle<CR>
 
 "" Set theme
+set background=dark
 colorscheme gotham256
+"colorscheme nord
 
-"" Nvim-specific config
-if has('nvim')
-  "" set nvim-specific config here
+"" non-Nvim-specific config
+if !has('nvim')
+  colorscheme gruvbox
+  set showmode
 endif

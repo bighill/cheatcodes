@@ -64,6 +64,7 @@ endif
 
 "" Hide vsplit border
 highlight VertSplit cterm=NONE
+set fillchars+=vert:\ 
 
 "" Key mappings
 map <f12> :NERDTreeToggle<CR>

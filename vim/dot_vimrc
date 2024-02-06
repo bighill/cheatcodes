@@ -32,8 +32,8 @@ endif
 
 "" Lightline status bar
 Plug 'itchyny/lightline.vim'
-let g:lightline = { 'colorscheme': 'gotham256' }
-"let g:lightline = { 'colorscheme': 'nord' }
+"let g:lightline = { 'colorscheme': 'gotham256' }
+let g:lightline = { 'colorscheme': 'nord' }
 set noshowmode
 
 "" Themes
@@ -57,22 +57,25 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-"" Line numbers
-if has('nvim')
-  set number
-endif
-
 "" Hide vsplit border
 highlight VertSplit cterm=NONE
 set fillchars+=vert:\ 
 
 "" Key mappings
+let mapleader = "\<Space>"
+let g:gitgutter_map_keys = 0 "" disable git-gutter keybindings
+map <leader>h <C-w>h
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+map <leader>l <C-w>l
+map <leader>d :GitGutterDiffOrig<CR>
+map <leader># :set number!<CR> "" toggle line numbers
 map <f12> :NERDTreeToggle<CR>
 
 "" Set theme
 set background=dark
-colorscheme gotham256
-"colorscheme nord
+"colorscheme gotham256
+colorscheme nord
 
 "" non-Nvim-specific config
 if !has('nvim')
